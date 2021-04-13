@@ -16,7 +16,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var weight_bmi: UITextField!
     @IBOutlet var weight_slider: UISlider!
     
-    let image_array = ["thin", "normal", "overweight", "obese", "extremely Obese"]
+    let image_array = ["thin", "normal", "overweight", "obese", "extremely obese"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,19 +82,29 @@ class ViewController: UIViewController,UITextFieldDelegate {
     
     
     func output(){
-        var bmi = BMICalculator(height: Int(height_slider.value), weight: Int(weight_slider.value))
+        var bmi = BMICalculator(height: height_slider.value, weight: weight_slider.value)
         //print(bmi)
-        output_bmi.text = String(bmi)
-        if bmi > 18.5 {
+        output_bmi.text = String(format: "%.2f", bmi)
+        
+        switch bmi {
+        case 0...18.5:
             self.image_bmi.image = UIImage(named: image_array[0])
-        }else if bmi < 24{
+            break
+        case 18.5...24:
             self.image_bmi.image = UIImage(named: image_array[1])
-        }else if bmi < 27{
+            break
+        case 24...27:
             self.image_bmi.image = UIImage(named: image_array[2])
-        }else if bmi < 35{
+            break
+        case 27...30:
             self.image_bmi.image = UIImage(named: image_array[3])
-        }else{
+            break
+        case 30...1000:
             self.image_bmi.image = UIImage(named: image_array[4])
+            break
+        default:
+            self.image_bmi.image = UIImage(named: image_array[4])
+            break
         }
         
         
@@ -103,8 +113,8 @@ class ViewController: UIViewController,UITextFieldDelegate {
 
 
 
-    func BMICalculator(height: Int,weight :Int) -> Float {
-        var BMI = Float(weight) / pow(Float(height/100), 2.0)
+    func BMICalculator(height: Float,weight :Float) -> Float {
+        var BMI = weight / pow(height/100, 2.0)
         print(BMI)
         return BMI
     }
