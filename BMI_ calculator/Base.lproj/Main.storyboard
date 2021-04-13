@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O1J-1H-gwp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="od3-6d-8xq">
+            <objects>
+                <viewController id="O1J-1H-gwp" customClass="ViewController" customModule="BMI__calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UnB-TU-Ebv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twk-oC-JsD">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qA-bB-kfp">
+                                        <rect key="frame" x="112.5" y="20" width="189.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ya5-9v-9qK">
+                                        <rect key="frame" x="28" y="316" width="358" height="39.5"/>
+                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="MHE-BW-UeC">
+                                        <rect key="frame" x="28" y="553" width="358" height="37.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4J-ZR-u76">
+                                                <rect key="frame" x="0.0" y="0.0" width="164" height="37.5"/>
+                                                <color key="tintColor" name="AccentColor"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="kg" textAlignment="center" minimumFontSize="30" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xL8-CI-YRq">
+                                                <rect key="frame" x="194" y="0.0" width="164" height="37.5"/>
+                                                <color key="tintColor" name="AccentColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="weight_textChanfged:" destination="O1J-1H-gwp" eventType="editingDidEnd" id="IKL-J8-9WQ"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="100" maxValue="250" translatesAutoresizingMaskIntoConstraints="NO" id="9E0-V0-bH0">
+                                        <rect key="frame" x="26" y="503" width="362" height="31"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <color key="minimumTrackTintColor" systemColor="labelColor"/>
+                                        <color key="maximumTrackTintColor" systemColor="labelColor"/>
+                                        <color key="thumbTintColor" systemColor="systemYellowColor"/>
+                                        <connections>
+                                            <action selector="height_ValueChanged:" destination="O1J-1H-gwp" eventType="valueChanged" id="A8f-ih-eR3"/>
+                                        </connections>
+                                    </slider>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="382-uX-iot">
+                                        <rect key="frame" x="28" y="445.5" width="358" height="37.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HV9-Y1-6Jx">
+                                                <rect key="frame" x="0.0" y="0.0" width="164" height="37.5"/>
+                                                <color key="tintColor" name="AccentColor"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="cm" textAlignment="center" minimumFontSize="30" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EtW-6A-I5M">
+                                                <rect key="frame" x="194" y="0.0" width="164" height="37.5"/>
+                                                <color key="tintColor" name="AccentColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="height_textChanged:" destination="O1J-1H-gwp" eventType="editingDidEnd" id="JRL-lz-xwe"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="30" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="MOG-nC-Ba1">
+                                        <rect key="frame" x="26" y="610.5" width="362" height="31"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <color key="minimumTrackTintColor" systemColor="labelColor"/>
+                                        <color key="maximumTrackTintColor" systemColor="labelColor"/>
+                                        <color key="thumbTintColor" systemColor="systemYellowColor"/>
+                                        <connections>
+                                            <action selector="weight_ValueChanged:" destination="O1J-1H-gwp" eventType="valueChanged" id="IE3-bQ-2Mh"/>
+                                        </connections>
+                                    </slider>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gZM-th-xas">
+                                        <rect key="frame" x="107" y="98.5" width="200" height="195.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="CYp-o8-lxA"/>
+                                            <constraint firstAttribute="height" constant="200" id="oEW-1W-jUp"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="382-uX-iot" firstAttribute="leading" secondItem="twk-oC-JsD" secondAttribute="leadingMargin" constant="20" id="0Ew-7M-T4q"/>
+                                    <constraint firstItem="382-uX-iot" firstAttribute="centerX" secondItem="twk-oC-JsD" secondAttribute="centerX" id="0Oa-6Q-jyQ"/>
+                                    <constraint firstItem="9E0-V0-bH0" firstAttribute="leading" secondItem="twk-oC-JsD" secondAttribute="leadingMargin" constant="20" id="1CK-Gv-yU4"/>
+                                    <constraint firstItem="Ya5-9v-9qK" firstAttribute="leading" secondItem="twk-oC-JsD" secondAttribute="leadingMargin" constant="20" id="1GE-zL-uzp"/>
+                                    <constraint firstItem="MHE-BW-UeC" firstAttribute="top" secondItem="9E0-V0-bH0" secondAttribute="bottom" constant="20" id="44P-Xs-GPZ"/>
+                                    <constraint firstItem="MHE-BW-UeC" firstAttribute="centerX" secondItem="twk-oC-JsD" secondAttribute="centerX" id="5fa-bM-W1V"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Ya5-9v-9qK" secondAttribute="trailing" constant="20" id="AVA-kv-FvO"/>
+                                    <constraint firstItem="Ya5-9v-9qK" firstAttribute="top" secondItem="gZM-th-xas" secondAttribute="bottom" constant="20" id="CO9-RW-qTC"/>
+                                    <constraint firstItem="9E0-V0-bH0" firstAttribute="top" secondItem="382-uX-iot" secondAttribute="bottom" constant="20" id="ELh-eh-G72"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="382-uX-iot" secondAttribute="trailing" constant="20" id="EXP-U7-3ff"/>
+                                    <constraint firstItem="gZM-th-xas" firstAttribute="centerX" secondItem="twk-oC-JsD" secondAttribute="centerX" id="GGE-SK-YPQ"/>
+                                    <constraint firstItem="MOG-nC-Ba1" firstAttribute="leading" secondItem="twk-oC-JsD" secondAttribute="leadingMargin" constant="20" id="HFt-9z-tpM"/>
+                                    <constraint firstItem="MOG-nC-Ba1" firstAttribute="top" secondItem="MHE-BW-UeC" secondAttribute="bottom" constant="20" id="HNN-AB-D03"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="MOG-nC-Ba1" secondAttribute="trailing" constant="20" id="IMl-1s-lwd"/>
+                                    <constraint firstItem="7qA-bB-kfp" firstAttribute="top" secondItem="twk-oC-JsD" secondAttribute="top" constant="20" symbolic="YES" id="TPO-hg-cG7"/>
+                                    <constraint firstItem="gZM-th-xas" firstAttribute="top" secondItem="7qA-bB-kfp" secondAttribute="bottom" constant="40" id="Wb4-Bt-AYK"/>
+                                    <constraint firstItem="MOG-nC-Ba1" firstAttribute="centerX" secondItem="twk-oC-JsD" secondAttribute="centerX" id="X2T-9G-jod"/>
+                                    <constraint firstItem="9E0-V0-bH0" firstAttribute="centerX" secondItem="twk-oC-JsD" secondAttribute="centerX" id="ZWI-UC-DvK"/>
+                                    <constraint firstItem="7qA-bB-kfp" firstAttribute="centerX" secondItem="twk-oC-JsD" secondAttribute="centerX" id="ecW-J1-1GM"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="MHE-BW-UeC" secondAttribute="trailing" constant="20" id="fDW-v2-vlz"/>
+                                    <constraint firstItem="MHE-BW-UeC" firstAttribute="leading" secondItem="twk-oC-JsD" secondAttribute="leadingMargin" constant="20" id="ixV-4v-V4k"/>
+                                    <constraint firstItem="382-uX-iot" firstAttribute="top" secondItem="Ya5-9v-9qK" secondAttribute="bottom" constant="90" id="jEk-wV-Jjv"/>
+                                    <constraint firstItem="Ya5-9v-9qK" firstAttribute="centerX" secondItem="twk-oC-JsD" secondAttribute="centerX" id="jLM-AC-ruE"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="9E0-V0-bH0" secondAttribute="trailing" constant="20" id="sMv-Gr-RpC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ft2-f9-50a"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="twk-oC-JsD" firstAttribute="top" secondItem="ft2-f9-50a" secondAttribute="top" id="48Y-om-F7f"/>
+                            <constraint firstItem="ft2-f9-50a" firstAttribute="bottom" secondItem="twk-oC-JsD" secondAttribute="bottom" id="9hE-UJ-fFw"/>
+                            <constraint firstItem="twk-oC-JsD" firstAttribute="leading" secondItem="ft2-f9-50a" secondAttribute="leading" id="QQV-20-aUf"/>
+                            <constraint firstItem="twk-oC-JsD" firstAttribute="trailing" secondItem="ft2-f9-50a" secondAttribute="trailing" id="V0Z-34-ds7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="height_bmi" destination="EtW-6A-I5M" id="7uT-4R-W8a"/>
+                        <outlet property="height_slider" destination="9E0-V0-bH0" id="u5K-4E-5ks"/>
+                        <outlet property="image_bmi" destination="gZM-th-xas" id="pIx-bI-GTH"/>
+                        <outlet property="output_bmi" destination="Ya5-9v-9qK" id="xVH-BN-Rfa"/>
+                        <outlet property="weight_bmi" destination="xL8-CI-YRq" id="845-rE-VYx"/>
+                        <outlet property="weight_slider" destination="MOG-nC-Ba1" id="9qw-ld-WCk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ts-c8-1CL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992.75362318840587" y="58.928571428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
